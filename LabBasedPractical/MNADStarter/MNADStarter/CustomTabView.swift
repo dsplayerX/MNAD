@@ -17,7 +17,6 @@ struct CustomTabView: View {
                     NavigationView {
                         HomeView(selectedCurrency: $selectedCurrency)
                             .navigationTitle("Currency Converter")
-                            
                     }.tabItem {
                         Label("Home", systemImage: "house")
                     }
@@ -26,7 +25,6 @@ struct CustomTabView: View {
                     NavigationView {
                         SettingsView(selectedCurrency: $selectedCurrency)
                             .navigationTitle("Settings")
-                        
                     }
                     .tabItem {
                             Label("Settings", systemImage: "gearshape")

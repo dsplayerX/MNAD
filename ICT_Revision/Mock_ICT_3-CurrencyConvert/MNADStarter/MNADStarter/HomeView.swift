@@ -27,16 +27,15 @@ struct HomeView: View {
 
     var body: some View {
         Text("Add home view content here")
-//        TextField("", text: $text)
-//            .onChange(of: text) { newValue in
-//                print("Pass the functions below over here to convert")
-//                print(newValue)
-//            }
+        TextField("", text: $text)
+            .onChange(of: text) { newValue in
+                print("Pass the functions below over here to convert")
+                print(newValue)
+            }
         
-//        ForEach(Currencies.allCases, id: \.self) { currency in
-//            Text(currency.rawValue)
-//        }
-        
+        ForEach(Currencies.allCases, id: \.self) { currency in
+            Text(currency.rawValue)
+        }
     }
     
     // MARK: USE THESE FUNCTIONS WITHIN A SWIFTUI `onChange()` VIEW MODIFIER
@@ -48,11 +47,16 @@ struct HomeView: View {
     private func reverseConvert(newValue: String) {
         // To convert LKR to a foreign currency you need to divide the value of currency by the rate (R):
         // F = LKR / R
+        
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView()
+//    }
+//}
+
+#Preview {
+    HomeView()
 }
